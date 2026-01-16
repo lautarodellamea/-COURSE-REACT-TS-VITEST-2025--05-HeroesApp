@@ -2,7 +2,7 @@ import { AdminLayout } from "@/admin/layouts/AdminLayout";
 import { AdminPage } from "@/admin/pages/AdminPage";
 import { HeroesLayout } from "@/heroes/layouts/HeroesLayout";
 import { lazy } from "react";
-import { createBrowserRouter, Navigate } from "react-router";
+import { createBrowserRouter, createHashRouter, Navigate } from "react-router";
 import { HomePage } from '@/heroes/pages/home/HomePage';
 import { HeroPage } from "@/heroes/pages/hero/HeroPage";
 
@@ -15,7 +15,10 @@ const SearchPage = lazy(() => import("@/heroes/pages/search/SearchPage"));
 // SE RECOMIENDA QUE LAS PAGINAS QUE NO SON TAN COMUNMENTE ACCESADAS COMO EL ADMIN QUE CARGEN DE PANERA PEREZOSA
 
 
-export const appRouter = createBrowserRouter([
+// export const appRouter = createBrowserRouter([
+// A la hora de hacer el deploy tenemos que hacer lo siguiente, aparecera un #, pero si nosotros podemos configurar el backend no es necesario hacer esto.
+// a la carpeta dist renombrarla a docs, osea hacer el build y cambiar el nombre, y en github pages elegir esta carpeta.
+export const appRouter = createHashRouter([
   {
     
     path: "/",
