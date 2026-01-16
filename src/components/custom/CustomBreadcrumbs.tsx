@@ -1,3 +1,4 @@
+import React from 'react';
 import { SlashIcon } from 'lucide-react';
 import {
   Breadcrumb,
@@ -28,17 +29,17 @@ export const CustomBreadcrumbs = ({ currentPage, breadcrumbs = [] }: Props) => {
           </BreadcrumbLink>
         </BreadcrumbItem>
 
-        {breadcrumbs.map((crumb) => (
-          <div className="flex items-center">
+        {breadcrumbs.map((crumb, index) => (
+          <React.Fragment key={`${crumb.to}-${index}`}>
+            <BreadcrumbSeparator>
+              <SlashIcon />
+            </BreadcrumbSeparator>
             <BreadcrumbItem>
-              <BreadcrumbSeparator>
-                <SlashIcon />
-              </BreadcrumbSeparator>
               <BreadcrumbLink asChild>
                 <Link to={crumb.to}>{crumb.label}</Link>
               </BreadcrumbLink>
             </BreadcrumbItem>
-          </div>
+          </React.Fragment>
         ))}
 
         <BreadcrumbSeparator>

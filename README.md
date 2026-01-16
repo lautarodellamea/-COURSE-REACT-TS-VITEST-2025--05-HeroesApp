@@ -1,3 +1,10 @@
+## Levantar desarrollo
+
+1. Clonar el repositorio
+2. Editar el archivo `.env` con las variables de entorno basado en el archivo `.env.template`
+3. Ejecutar `npm install`
+4. Ejecutar `npm run dev`
+
 ## Instalaciones
 
 https://reactrouter.com/start/data/installation
@@ -28,3 +35,11 @@ En esta sección nos enfocaremos en trabajar con las funcionalidades de nuestra 
 - Mucho más
 
 Es una sección que posiblemente se sienta pesada por el nivel de configuraciones y funcionalidades, pero es una aplicación que resuelve problemas reales, con situaciones reales en el desarrollo.
+
+## Sección 3: Búsqueda Avanzada y Gestión de Favoritos
+
+En esta sección, trabajaremos en la implementación de la búsqueda avanzada de héroes y en un sistema global para gestionar los héroes favoritos.
+
+El objetivo es seguir el patrón de delegar la mayor cantidad de lógica a estados fuera de `useState` y `useEffect` para optimizar el rendimiento y, finalmente, preservar el estado al compartir el enlace de la aplicación.
+
+Tras esta sección, se proporcionarán tareas adicionales para practicar y consolidar los conocimientos adquiridos. Posteriormente, se llevarán a cabo pruebas automáticas.
